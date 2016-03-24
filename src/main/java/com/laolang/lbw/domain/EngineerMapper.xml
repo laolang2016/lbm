@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.laolang.mapper.StudentMapper">
+	<resultMap type="Student" id="EngineerResult">
+		<id property="id" column="e_id" />
+		<result property="name" column="e_name" />
+		<result property="pic" column="e_pic" />
+		<result property="qid" column="e_qic" />
+		<result property="phone" column="e_phone" />
+		<result property="joinTime" column="e_join_time" />
+		<result property="address" column="e_address" />
+		<result property="addressDetail" column="e_address_detail" />
+		<result property="workTime" column="e_work_time" />
+		<result property="bufInfo" column="e_buy_info" />
+		<result property="e_welcome_info" column="e_welcome_info" />
+		<result property="e_door" column="e_door" />
+		<result property="e_door_price" column="e_door_price" />
+	</resultMap>
+
+	<select id="findEngineerById" parameterType="int" resultType="EngineerResult">
+		select * from engineer where e_id = #{id}
+	</select>
+	<select id="selectByName" parameterType="String" resultType="Student">
+		select id,name,age,sex from student where name = #{name}
+	</select>
+
+
+
+</mapper>

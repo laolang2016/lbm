@@ -3,7 +3,8 @@ package com.laolang.lbw.domain;
 import java.util.Date;
 
 /**
- * 工程师
+ * 工程师.
+ *
  * @author 小代码
  * @version 1.0
  */
@@ -14,7 +15,6 @@ public class Engineer {
 	 */
 	public Engineer() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -38,6 +38,8 @@ public class Engineer {
 	 *            the work time
 	 * @param bufInfo
 	 *            the buf info
+	 * @param welcomeInfo
+	 *            the welcome info
 	 * @param door
 	 *            the door
 	 * @param doorPrice
@@ -45,7 +47,8 @@ public class Engineer {
 	 */
 	public Engineer(String name, String pic, String qid, String phone,
 			Date joinTime, String address, String addressDetail,
-			String workTime, String bufInfo, boolean door, double doorPrice) {
+			String workTime, String bufInfo, String welcomeInfo, boolean door,
+			double doorPrice) {
 		super();
 		this.name = name;
 		this.pic = pic;
@@ -56,6 +59,7 @@ public class Engineer {
 		this.addressDetail = addressDetail;
 		this.workTime = workTime;
 		this.bufInfo = bufInfo;
+		this.welcomeInfo = welcomeInfo;
 		this.door = door;
 		this.doorPrice = doorPrice;
 	}
@@ -83,6 +87,8 @@ public class Engineer {
 	 *            the work time
 	 * @param bufInfo
 	 *            the buf info
+	 * @param welcomeInfo
+	 *            the welcome info
 	 * @param door
 	 *            the door
 	 * @param doorPrice
@@ -90,7 +96,8 @@ public class Engineer {
 	 */
 	public Engineer(int id, String name, String pic, String qid, String phone,
 			Date joinTime, String address, String addressDetail,
-			String workTime, String bufInfo, boolean door, double doorPrice) {
+			String workTime, String bufInfo, String welcomeInfo, boolean door,
+			double doorPrice) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -102,6 +109,7 @@ public class Engineer {
 		this.addressDetail = addressDetail;
 		this.workTime = workTime;
 		this.bufInfo = bufInfo;
+		this.welcomeInfo = welcomeInfo;
 		this.door = door;
 		this.doorPrice = doorPrice;
 	}
@@ -117,7 +125,18 @@ public class Engineer {
 				+ ", qid=" + qid + ", phone=" + phone + ", joinTime="
 				+ joinTime + ", address=" + address + ", addressDetail="
 				+ addressDetail + ", workTime=" + workTime + ", bufInfo="
-				+ bufInfo + ", door=" + door + ", doorPrice=" + doorPrice + "]";
+				+ bufInfo + ", welcomeInfo=" + welcomeInfo + ", door=" + door
+				+ ", doorPrice=" + doorPrice + ", getId()=" + getId()
+				+ ", getName()=" + getName() + ", getPic()=" + getPic()
+				+ ", getQid()=" + getQid() + ", getPhone()=" + getPhone()
+				+ ", getJoinTime()=" + getJoinTime() + ", getAddress()="
+				+ getAddress() + ", getAddressDetail()=" + getAddressDetail()
+				+ ", getWorkTime()=" + getWorkTime() + ", getBufInfo()="
+				+ getBufInfo() + ", getWelcomeInfo()=" + getWelcomeInfo()
+				+ ", isDoor()=" + isDoor() + ", getDoorPrice()="
+				+ getDoorPrice() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
 	}
 
 	/**
@@ -301,6 +320,25 @@ public class Engineer {
 	}
 
 	/**
+	 * Gets the welcome info.
+	 *
+	 * @return the welcome info
+	 */
+	public String getWelcomeInfo() {
+		return welcomeInfo;
+	}
+
+	/**
+	 * Sets the welcome info.
+	 *
+	 * @param welcomeInfo
+	 *            the welcome info
+	 */
+	public void setWelcomeInfo(String welcomeInfo) {
+		this.welcomeInfo = welcomeInfo;
+	}
+
+	/**
 	 * Sets the buf info.
 	 *
 	 * @param bufInfo
@@ -348,40 +386,43 @@ public class Engineer {
 		this.doorPrice = doorPrice;
 	}
 
-	/** 工程师 */
+	/** 工程师. */
 	private int id;
 
-	/** 工程师 */
+	/** 工程师. */
 	private String name;
 
-	/** 工程师 */
+	/** 工程师. */
 	private String pic;
 
-	/** 工程师编号 */
+	/** 工程师编号. */
 	private String qid;
 
-	/** 电话 */
+	/** 电话. */
 	private String phone;
 
-	/** 加入时间 */
+	/** 加入时间. */
 	private Date joinTime;
 
-	/** 工程师地址 */
+	/** 工程师地址. */
 	private String address;
 
-	/** 工程师详细住址 */
+	/** 工程师详细住址. */
 	private String addressDetail;
 
-	/** 工程师工作时间段 */
+	/** 工程师工作时间段. */
 	private String workTime;
 
-	/** 购买需知 */
+	/** 购买需知. */
 	private String bufInfo;
 
-	/** 是否可上门 */
+	/** 欢迎语. */
+	private String welcomeInfo;
+
+	/** 是否可上门. */
 	private boolean door;
 
-	/** 上门费用 */
+	/** 上门费用. */
 	private double doorPrice;
 
 }
